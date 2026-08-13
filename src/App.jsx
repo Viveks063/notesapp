@@ -98,7 +98,21 @@ export default function App() {
   }
 
   return (
-    <Authenticator>
+    <Authenticator
+  variation="modal"
+  formFields={{
+    signIn: {
+      username: {
+        label: "Email",
+        placeholder: "Enter your email",
+      },
+      password: {
+        label: "Password",
+        placeholder: "Enter your password",
+      },
+    },
+  }}
+>
       {({ signOut }) => (
         <Flex
           className="App"
