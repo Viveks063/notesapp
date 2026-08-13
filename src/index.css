@@ -1,6 +1,6 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
+  --text: #d8d5db;
+  --text-h: #cfcdd3;
   --bg: #fff;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
@@ -108,4 +108,85 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+/* Amplify form input text */
+.amplify-input {
+  color: #ffffff !important;
+  background-color: #16171d !important;
+}
+
+.amplify-input::placeholder {
+  color: #9ca3af !important;
+}
+
+input {
+  color: #ffffff !important;
+}
+/* ================================
+   Notes App Dark Theme Fix
+   ================================ */
+
+body {
+  background: #16171d;
+  color: #f3f4f6;
+}
+
+#root {
+  background: #16171d;
+  color: #f3f4f6;
+}
+
+/* Regular text */
+p,
+span,
+label {
+  color: #f3f4f6 !important;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #f3f4f6 !important;
+}
+
+/* Amplify UI text */
+.amplify-text {
+  color: #f3f4f6 !important;
+}
+
+.amplify-heading {
+  color: #f3f4f6 !important;
+}
+
+/* Input text */
+input,
+textarea {
+  color: #ffffff !important;
+  background-color: #16171d !important;
+}
+
+/* Input placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Amplify inputs */
+.amplify-input {
+  color: #ffffff !important;
+  background-color: #16171d !important;
+}
+
+/* Buttons */
+button {
+  color: #ffffff !important;
+}
+
+/* Amplify buttons */
+.amplify-button {
+  color: #ffffff !important;
 }

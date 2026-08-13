@@ -7,11 +7,13 @@ specifies that any unauthenticated user can "create", "read", "update",
 and "delete" any "Todo" records.
 =========================================================================*/
 const schema = a.schema({
-  Todo: a
+  Note: a
     .model({
-      content: a.string(),
+       name: a.string(),
+      description: a.string(),
+      image: a.string(),
     })
-    .authorization((allow) => [allow.guest()]),
+    .authorization((allow) => [allow.owner()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;
@@ -19,7 +21,7 @@ export type Schema = ClientSchema<typeof schema>;
 export const data = defineData({
   schema,
   authorizationModes: {
-    defaultAuthorizationMode: 'identityPool',
+    defaultAuthorizationMode: 'userPool',
   },
 });
 
@@ -50,4 +52,4 @@ Fetch records from the database and use them in your frontend component.
   function's RETURN statement */
 // const { data: todos } = await client.models.Todo.list()
 
-// return <ul>{todos.map(todo => <li key={todo.id}>{todo.content}</li>)}</ul>
+// return <ul>{todos.map(todo => <li key={todo.id}>{todo.name}</li>)}</ul>
